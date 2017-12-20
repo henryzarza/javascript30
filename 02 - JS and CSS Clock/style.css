@@ -1,0 +1,73 @@
+:root {
+    --color-accent: #E3D9C4;
+    --clock-size: 20rem;
+    --posistion-indicators: 45%;
+}
+html {
+    font-size: 10pt;
+    background: url('http://deanpcloutier.com/wp-content/uploads/2012/10/Paris_train_station.jpg') bottom center;
+    background-size: cover;
+}
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    display: -webkit-flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+}
+.clock {
+    width: var(--clock-size);
+    height: var(--clock-size);
+    background-color: rgba(0,0,0,.3);
+    border: .25rem solid var(--color-accent);
+    border-radius: 50%;
+    margin: 3rem auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+      0 0 0 5px rgba(0,0,0,0.1),
+      inset 0 0 6px 1px var(--color-accent),
+      inset 0 0 10px black,
+      0 0 10px rgba(0,0,0,0.2);
+}
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+.hand {
+    width: 50%;
+    height: .5rem;
+    background-color: var(--color-accent);
+    position: absolute;
+    top: 50%;
+    transform-origin: 99%;
+    transform: rotate(90deg);
+    transition: all .05s;
+    transition-timing-function: cubic-bezier(.1, 2.7, .58, 1);
+}
+.indicators {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    position: absolute;
+    text-shadow: 0.2rem 0 1rem black;
+}
+.three {
+    top: var(--posistion-indicators);
+    right: 0;
+}
+.six {
+    bottom: 0;
+    left: var(--posistion-indicators);
+}
+.nine {
+    top: var(--posistion-indicators);
+}
+.twelve {
+    top: 0;
+    left: var(--posistion-indicators);
+}
