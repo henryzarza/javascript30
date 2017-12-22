@@ -1,0 +1,68 @@
+html {
+    box-sizing: border-box;
+    background:#ffc600;
+    font-family:'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+}
+body {
+    margin: 0;
+}
+*, *:after, *::before {
+    box-sizing: inherit;
+}
+.panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+.panel {
+    background-color: #ffc600;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, .1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    transition: 
+        font-size .7s cubic-bezier(.61, -.19, .7, -.11),
+        flex .7s cubic-bezier(.61, -.19, .7, -.11),
+        background .2s;
+    font-size: 1rem;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform .5s;
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.panel > *:first-child { transform: translateY(-100%); }
+.panel > *:last-child { transform: translateY(100%); }
+.panel.open-active > *:first-child { transform: translateY(0); }
+.panel.open-active > *:last-child { transform: translateY(0); }
+.panel p {
+    text-transform: uppercase;
+    font-family: cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .72), 0 0 14px rgba(0, 0, 0, .45);
+    font-size: 1.2em;
+}
+.panel p:nth-child(2) {
+    font-size: 4em;
+}
+.panel.open {
+    flex: 5;
+    font-size: 2rem;
+}
+.panel1 { background-image: url(https://static.pexels.com/photos/46160/field-clouds-sky-earth-46160.jpeg); }
+.panel2 { background-image: url(http://conceptodefinicion.de/wp-content/uploads/2014/11/aurora_boreal_-_creative_commons.jpg); }
+.panel3 { background-image: url(http://lfsufseq9i2bo0hk2tyezb8b.wpengine.netdna-cdn.com/wp-content/uploads/2016/04/tabphoto-summer-1.jpg); }
+.panel4 { background-image: url(http://papadakis.net/wp-content/uploads/2016/01/WildAfrica_234-235_newed.jpg); }
+.panel5 { background-image: url(https://static.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg); }
