@@ -1,0 +1,33 @@
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    background-color: #007eff40;
+}
+.inbox {
+    margin: 2.2rem auto;
+    max-width: 20rem;
+    border-radius: .1rem;
+    background-color: #fff;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.2);
+}
+.item {
+    display: flex;
+    border-bottom: 1px solid #efeeef;
+    align-items: center;
+}
+.item input[type="checkbox"] {
+    margin: 1rem;
+}
+.item input:checked + label {
+    text-decoration: line-through;
+    background: #f9f9f9;
+}
+.item label {
+    margin: 0;
+    padding: 1rem;
+    transition: background .2s;
+    flex: 1;
+    font-weight: 200;
+    border-left: 1px solid #efeeef;
+    cursor: pointer;
+}
