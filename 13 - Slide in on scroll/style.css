@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+  font-family: "helvetica neue", Helvetica;
+  font-size: 14pt;
+  font-weight: 200;
+  background-color: #010101;
+  background: linear-gradient(90deg, #010101 0%, #5a5c61 50%, #616f76 100%);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.card {
+  width: 30rem;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background-color: #e4e8ee;
+  text-align: justify;
+  border-radius: .2rem;
+}
+h1 {
+  margin-top: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  width: 13rem;
+}
+.align-left {
+  float: left;
+  margin-right: 1rem;
+}
+.align-right {
+  float: right;
+  margin-left: 1rem;
+}
+.slide-in {
+  opacity: 0;
+  transition: all 0.5s;
+}
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
